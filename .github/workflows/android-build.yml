@@ -1,0 +1,58 @@
+name: Android CI
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 34
+          build-tools: 34.0.0
+
+      - name: Install Gradle via SDKMAN
+        run: |
+          curl -s https://get.sdkman.io | bash
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
+          sdk install gradle 8.7
+          gradle --version
+
+      - name: Build App (Debug/Release/AAB)
+        env:
+          ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
+        run: |
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
+          gradle clean :app:assembleDebug :app:assembleRelease :app:bundleRelease --no-daemon
+
+      - name: Upload APK (Debug)
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+
+      - name: Upload APK (Release unsigned)
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-apk
+          path: app/build/outputs/apk/release/*.apk
+
+      - name: Upload App Bundle (Release unsigned)
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-aab
+          path: app/build/outputs/bundle/release/*.aab

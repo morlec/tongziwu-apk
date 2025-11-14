@@ -1,0 +1,82 @@
+[
+  {
+    "char": "人",
+    "pinyin": ["rén"],
+    "radical": "人",
+    "strokes": 2,
+    "phrases": ["人人", "人口", "人才"],
+    "examples": ["人人都有梦想。", "中国是人口大国。"]
+  },
+  {
+    "char": "口",
+    "pinyin": ["kǒu"],
+    "radical": "口",
+    "strokes": 3,
+    "phrases": ["开口", "入口", "出口"],
+    "examples": ["请开口读课文。", "这里是入口。"]
+  },
+  {
+    "char": "日",
+    "pinyin": ["rì"],
+    "radical": "日",
+    "strokes": 4,
+    "phrases": ["今日", "日月", "生日"],
+    "examples": ["今日天气晴朗。", "明天是他的生日。"]
+  },
+  {
+    "char": "木",
+    "pinyin": ["mù"],
+    "radical": "木",
+    "strokes": 4,
+    "phrases": ["木头", "木马", "树木"],
+    "examples": ["树木让空气更清新。", "木头可以做桌子。"]
+  },
+  {
+    "char": "水",
+    "pinyin": ["shuǐ"],
+    "radical": "水",
+    "strokes": 4,
+    "phrases": ["河水", "雨水", "开水"],
+    "examples": ["河水在流动。", "请喝开水。"]
+  },
+  {
+    "char": "火",
+    "pinyin": ["huǒ"],
+    "radical": "火",
+    "strokes": 4,
+    "phrases": ["火焰", "火车", "火把"],
+    "examples": ["火焰很热。", "火车跑得快。"]
+  },
+  {
+    "char": "山",
+    "pinyin": ["shān"],
+    "radical": "山",
+    "strokes": 3,
+    "phrases": ["高山", "山路", "山峰"],
+    "examples": ["高山很壮丽。", "山路弯弯曲曲。"]
+  },
+  {
+    "char": "田",
+    "pinyin": ["tián"],
+    "radical": "田",
+    "strokes": 5,
+    "phrases": ["田地", "田野", "农田"],
+    "examples": ["田野很广阔。", "农田里有庄稼。"]
+  },
+  {
+    "char": "心",
+    "pinyin": ["xīn"],
+    "radical": "心",
+    "strokes": 4,
+    "phrases": ["心中", "安心", "小心"],
+    "examples": ["请安心学习。", "过马路要小心。"]
+  },
+  {
+    "char": "大",
+    "pinyin": ["dà"],
+    "radical": "大",
+    "strokes": 3,
+    "phrases": ["大会", "大山", "大海"],
+    "examples": ["大海很美。", "我们在大会上发言。"]
+  }
+]
