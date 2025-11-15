@@ -38,14 +38,21 @@ android {
         kotlinCompilerExtensionVersion = "1.5.12"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    dynamicFeatures += setOf(":feature-ocr")
 }
-
-android.dynamicFeatures += setOf(":feature-ocr")
 
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2024.06.00"))
